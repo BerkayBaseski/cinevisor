@@ -1,0 +1,177 @@
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 4% 3rem;
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 50%, var(--bg-secondary) 100%);
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 4rem 0 5rem;
+  position: relative;
+}
+
+.heroGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(229, 9, 20, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 0.8s ease;
+}
+
+.heroSubtitle {
+  font-size: 1.3rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.heroTypes {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 0.8s ease 0.3s both;
+}
+
+.typeFilters {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 0.8s ease 0.5s both;
+}
+
+/* Section Header */
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.sectionHeader h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sectionHeader h2 i {
+  color: var(--netflix-red);
+}
+
+.sortButtons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Video Count */
+.videoCount {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.videoCount p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.countBadge {
+  background: rgba(229, 9, 20, 0.2);
+  color: var(--netflix-red);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+/* Empty State */
+.emptyState {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.emptyState i {
+  font-size: 3rem;
+  color: var(--text-tertiary);
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.emptyState p {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.emptyHint {
+  color: var(--text-tertiary) !important;
+  font-size: 0.95rem !important;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

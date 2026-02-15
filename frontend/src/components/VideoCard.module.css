@@ -1,0 +1,166 @@
+.card {
+    background: #1a1a1a;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    animation: fadeInUp 0.6s ease both;
+}
+
+.card:hover {
+    transform: scale(1.08) translateY(-8px);
+    z-index: 10;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+.thumbnailWrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.thumbnail {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    display: block;
+    transition: all 0.4s ease;
+}
+
+.card:hover .thumbnail {
+    transform: scale(1.05);
+}
+
+.typeBadge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 2;
+}
+
+.typeBadge.ai {
+    background: #E50914;
+    color: #ffffff;
+}
+
+.typeBadge.human {
+    background: #B20710;
+    color: #ffffff;
+}
+
+.playOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.playOverlay i {
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.card:hover .playOverlay {
+    opacity: 1;
+}
+
+.card:hover .playOverlay i {
+    transform: scale(1);
+}
+
+.info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 4rem 1.25rem 1.25rem;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0.95) 100%);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.card:hover .info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #ffffff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.meta {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 0.85rem;
+    color: #d2d2d2;
+    margin-bottom: 0.75rem;
+}
+
+.username {
+    color: #E50914;
+    font-weight: 600;
+}
+
+.stats {
+    display: flex;
+    gap: 1.25rem;
+    font-size: 0.9rem;
+    color: #d2d2d2;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: all 0.2s ease;
+}
+
+.stat:hover {
+    color: #E50914;
+    transform: scale(1.1);
+}
+
+.stat i {
+    font-size: 0.95rem;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

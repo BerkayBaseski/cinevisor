@@ -1,0 +1,102 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 4%;
+    min-height: calc(100vh - 68px);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    font-size: 1.8rem;
+}
+
+.header h1 i {
+    color: var(--netflix-red);
+    margin-right: 0.5rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.notif {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: rgba(20, 20, 20, 0.6);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.notif:hover {
+    background: rgba(30, 30, 30, 0.8);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.notif.unread {
+    background: rgba(229, 9, 20, 0.05);
+    border-color: rgba(229, 9, 20, 0.2);
+}
+
+.notifIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--netflix-red);
+    flex-shrink: 0;
+}
+
+.notifContent {
+    flex: 1;
+}
+
+.notifContent p {
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+}
+
+.notifTime {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+}
+
+.unreadDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--netflix-red);
+    flex-shrink: 0;
+}
+
+.emptyState {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.emptyState i {
+    font-size: 3rem;
+    color: var(--text-tertiary);
+    margin-bottom: 1rem;
+    opacity: 0.5;
+    display: block;
+}
+
+.emptyState p {
+    color: var(--text-tertiary);
+}

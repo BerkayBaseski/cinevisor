@@ -1,0 +1,250 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 4%;
+    min-height: calc(100vh - 68px);
+}
+
+.playerSection {
+    animation: fadeIn 0.5s ease;
+}
+
+.player {
+    width: 100%;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+.video {
+    width: 100%;
+    display: block;
+    max-height: 70vh;
+}
+
+.videoInfo {
+    padding: 1.5rem 0;
+}
+
+.titleRow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.titleRow h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    flex: 1;
+}
+
+.typeBadge {
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.typeBadge.ai {
+    background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+    color: #ffffff;
+}
+
+.typeBadge.human {
+    background: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);
+    color: #ffffff;
+}
+
+.metaRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.metaLeft {
+    display: flex;
+    gap: 1.5rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    flex-wrap: wrap;
+}
+
+.metaLeft span {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.owner {
+    color: var(--netflix-red) !important;
+    font-weight: 600;
+}
+
+.actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.actionBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    font-family: inherit;
+}
+
+.actionBtn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.actionBtn.liked {
+    background: rgba(229, 9, 20, 0.2);
+    color: var(--netflix-red);
+    border-color: rgba(229, 9, 20, 0.4);
+}
+
+.description {
+    padding: 1rem 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Comments */
+.commentsSection {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.commentsSection h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.commentsSection h3 i {
+    color: var(--netflix-red);
+}
+
+.commentForm {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.commentForm .btn {
+    align-self: flex-end;
+}
+
+.commentsList {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.comment {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.commentHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.commentAuthor {
+    font-weight: 600;
+    color: var(--netflix-red);
+    font-size: 0.9rem;
+}
+
+.commentTime {
+    color: var(--text-tertiary);
+    font-size: 0.8rem;
+}
+
+.deleteBtn {
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: var(--text-tertiary);
+    cursor: pointer;
+    padding: 0.25rem;
+    transition: color 0.2s ease;
+    font-size: 0.8rem;
+}
+
+.deleteBtn:hover {
+    color: #ef4444;
+}
+
+.commentContent {
+    color: var(--text-secondary);
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.noComments {
+    color: var(--text-tertiary);
+    text-align: center;
+    padding: 2rem;
+}
+
+.notFound {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.notFound i {
+    font-size: 3rem;
+    color: var(--text-tertiary);
+    margin-bottom: 1rem;
+}
+
+.notFound h2 {
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .titleRow {
+        flex-direction: column;
+    }
+
+    .metaRow {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,120 @@
+.authContainer {
+    min-height: calc(100vh - 68px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 50%, var(--bg-secondary) 100%);
+}
+
+.authCard {
+    width: 100%;
+    max-width: 450px;
+    background: rgba(20, 20, 20, 0.9);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 3rem 2.5rem;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
+    animation: fadeInUp 0.6s ease;
+}
+
+.authHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.authHeader h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #ffffff 0%, #d2d2d2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.authHeader p {
+    color: var(--text-tertiary);
+    font-size: 0.95rem;
+}
+
+.authForm {
+    margin-bottom: 1.5rem;
+}
+
+.authFooter {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.authFooter p {
+    color: var(--text-tertiary);
+    font-size: 0.9rem;
+}
+
+.authLink {
+    color: var(--netflix-red) !important;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.authLink:hover {
+    color: var(--netflix-red-light) !important;
+    text-decoration: underline;
+}
+
+/* Register specific */
+.typeCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.typeCard {
+    background: rgba(42, 42, 42, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.25rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.typeCard:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.typeCard.active {
+    border-width: 3px;
+    transform: translateY(-4px);
+}
+
+.typeCard.activeAi {
+    border-color: #8b5cf6;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(99, 102, 241, 0.15) 100%);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
+}
+
+.typeCard.activeHuman {
+    border-color: #ec4899;
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.15) 0%, rgba(244, 63, 94, 0.15) 100%);
+    box-shadow: 0 8px 24px rgba(236, 72, 153, 0.4);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

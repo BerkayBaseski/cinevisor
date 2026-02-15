@@ -1,0 +1,39 @@
+# Environment files
+.env
+.env.local
+.env.production
+
+# Dependencies
+backend/vendor/
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+logs/
+
+# Backups
+*.sql
+backups/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# PHP
+composer.lock
+
+# Build files
+dist/
+build/
+
